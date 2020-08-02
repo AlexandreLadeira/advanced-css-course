@@ -7,19 +7,27 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* Root font size (Browser default is 16px)*/
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header {
@@ -38,12 +46,12 @@ body {
 
 .logo-box {
     position: absolute;
-    top: 40px; /* The reference is the parent that has its position set to relative */
-    left: 40px;
+    top: 4rem; /* The reference is the parent that has its position set to relative */
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .text-box {
@@ -59,14 +67,14 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 }
 
 .heading-main {
     display: block; /* Block elements occupy the entire width they have */                       
-    font-size: 60px; /* available and they create line brakes before and after them */ 
+    font-size: 6rem; /* available and they create line brakes before and after them */ 
     font-weight: 400;
-    letter-spacing: 35px;  
+    letter-spacing: 3.5rem;  
     
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -77,9 +85,9 @@ body {
 
 .heading-sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 17.4px; 
+    letter-spacing: 1.75rem; 
     
     animation: moveInRight 1s ease-out;
 }
@@ -87,11 +95,11 @@ body {
 @keyframes moveInLeft {
     0% { /* Initial state */
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px); /* Goes a little bit more to the right */
+        transform: translateX(1rem); /* Goes a little bit more to the right */
 
     }
 
@@ -104,11 +112,11 @@ body {
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px); 
+        transform: translateX(-1rem); 
 
     }
 
@@ -121,7 +129,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% { 
@@ -134,9 +142,9 @@ body {
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     position: relative;
 
     transition: all .2s; /* Hover and Active will be animated in relation to the initial state  */
@@ -144,12 +152,12 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0px 10px 20px rgb(0, 0, 0, .2); /* x y blur */
+    box-shadow: 0 1rem 2rem rgb(0, 0, 0, .2); /* x y blur */
 }
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0px 5px 10px rgb(0, 0, 0, .2); /* x y blur */
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2); /* x y blur */
 }
 
 .btn-white {
@@ -162,7 +170,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
     
     position: absolute; /* Hidden behind the button */
     top: 0;
