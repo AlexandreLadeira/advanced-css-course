@@ -44,17 +44,17 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem; /* The reference is the parent that has its position set to relative */
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -70,7 +70,7 @@ body {
     margin-bottom: 6rem;
 }
 
-.heading-main {
+.heading-primary--main {
     display: block; /* Block elements occupy the entire width they have */                       
     font-size: 6rem; /* available and they create line brakes before and after them */ 
     font-weight: 400;
@@ -83,7 +83,7 @@ body {
     /* animation-iteration-count: 3; Animation plays 3 times */
 }
 
-.heading-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -160,7 +160,7 @@ body {
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .2); /* x y blur */
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -180,7 +180,7 @@ body {
     transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: white;
 }
 
@@ -189,7 +189,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; /* 0% properties will be applied before the animation starts */
 }
