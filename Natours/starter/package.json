@@ -6,9 +6,10 @@
   "repository": "https://github.com/AlexandreLadeira/advanced-css-course",
   "license": "MIT",
   "dependencies": {
+    "live-server": "^1.2.1",
     "node-sass": "^4.14.1"
   },
   "scripts": {
-    "compile:scss": "node-sass scss/main.scss css/style.css"
+    "compile:scss": "node-sass scss/main.scss css/style.css -w"
   }
 }
